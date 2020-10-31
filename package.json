@@ -1,0 +1,14 @@
+{
+  "name": "studybuddy",
+  "version": "1.0.0",
+  "description": "A simple alarm program.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Hamza Alsarakbi",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.1.5"
+  }
+}
