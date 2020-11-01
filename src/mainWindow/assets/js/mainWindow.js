@@ -1,0 +1,1 @@
+popup('welcome', 'Welcome!', {src: '../../src/global_assets/img/window_icons/close.png', rotate: false});

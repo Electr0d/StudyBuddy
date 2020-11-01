@@ -3,4 +3,7 @@
   --primary-color: rgb(240, 240, 240);
 
   --primary-hover: rgb(50, 50, 50);
+
+  --primary-accent: rgb(114, 42, 42);
+  --secondary-accent: rgb(29, 29, 32);
 }
