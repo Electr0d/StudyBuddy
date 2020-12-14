@@ -1,4 +1,6 @@
-function popup(id, title, icon) {
+const { BrowserWindowProxy } = require('electron');
+
+function addPopup(id, title, icon) {
   // create overlay
   let overlay = document.createElement('overlay');
   overlay.setAttribute('id', id + '-overlay');
@@ -50,6 +52,13 @@ function popup(id, title, icon) {
   close.setAttribute('id', id + '-window-close');
   close.setAttribute('src', '../../src/global_assets/img/window_icons/close.png');
   controls.appendChild(close);
+
+  // create window body
+  let body = document.createElement('div');
+  body.setAttribute('class', 'window-body');
+  body.setAttribute('id', id + '-window-body');
+  window.appendChild(body);
+  return {overlay: overlay, body: body}
 }
 
 

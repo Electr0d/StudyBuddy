@@ -1,0 +1,91 @@
+.section {
+  margin: 1em;
+}
+
+
+/* only add border bottom to parameters except for the last parameter */
+.section .settings-parameter:not(:last-child) {
+  border-bottom: 1px solid var(--primary-seperator);
+}
+.section-header {
+  font-size: 2em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--primary-accent);
+  padding: 0.5em;
+  color: var(--primary-accent);
+  margin-bottom: 0.5em;
+}
+
+.settings-parameter {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+  margin-bottom: 0.7em;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.parameter-text {
+  max-width: 80%;
+}
+.parameter-text.parameter-maximize {
+  max-width: 100%;
+  width: 100%;
+}
+.parameter-container {
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 40%;
+}
+
+
+
+
+.slider {
+	-webkit-appearance: none;
+	height: 7px;
+	border-radius: 5px;
+	background: var(--secondary-background);
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+  width: calc(100% - 60px);
+  margin-right: 1em;
+}
+.slider:hover {
+	opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 10px;
+	height: 25px;
+	border-radius: 10px;
+	background: var(--primary-accent);
+	cursor: pointer;
+}
+.slider-span {
+	width: 30px;
+	margin-left: 25px;
+}
+
+
+input.slider-input {
+  background: transparent; 
+  width: auto;
+  border: 2px solid var(--input-border);
+  padding: 10px;
+  border-radius: 0.5em; 
+  max-width: 50px;
+}
+input.slider-input:hover {
+  border-bottom-color: var(--input-hover);
+}
+input.slider-input:focus {
+  border-color: var(--input-hover);
+}

@@ -6,19 +6,21 @@
   color: var(--primary-color);
   font-family: 'Roboto', sans-serif;
   transition: 0.2s ease-out;
-
 }
 
 body {
   display: flex;
   flex-direction: column;
   background: var(--primary-background);
+  overflow: hidden;
 }
 .app {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: auto;
+  height: calc(100vh - 31px);
 }
 
 .title {
@@ -28,3 +30,71 @@ body {
   margin-top: 1em;
 }
 
+span {
+  margin: 10px 0 10px 0;
+}
+
+span.error {
+  color: var(--primary-error);
+}
+.no-error {
+  opacity: 0;
+  transform: translateY(100%) scale(0.9);
+  transform-origin: center;
+}
+
+
+button {
+  background: var(--primary-background);
+  border: 1px solid var(--primary-accent);
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  color: var(--primary-accent);
+  cursor: pointer;
+  -webkit-font-smoothing: subpixel-antialiased;
+  backface-visibility: hidden;
+}
+
+button:hover {
+  transform: scale(1.02) perspective(1px) translateZ(0);
+  backface-visibility: hidden;;
+  transition: 0.1s;
+}
+
+button:active {
+  transform: scale(0.98) translateZ(0);
+  transition: 0.1s;
+}
+
+button.error {
+  filter: grayscale(1) brightness(0.5);
+	pointer-events: none;
+}
+
+
+/* status */
+.status {
+  font-size: 72px;
+  margin: 20px;
+}
+.status-break {
+  color: var(--break-color);
+}
+.status-study {
+  color: var(--study-color);
+}
+
+.text-tip {
+  margin: 20px;
+}
+
+
+
+/* cards section */
+.cards-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

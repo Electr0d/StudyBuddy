@@ -1,9 +1,33 @@
 :root {
   --primary-background: rgb(20, 20, 20);
-  --primary-color: rgb(240, 240, 240);
+  --secondary-background: rgba(200, 200, 200, 0.2);
+  --primary-color: rgb(220, 220, 220);
+  --primary-shadow: rgb(40, 40, 40);
+  --primary-border: rgb(50, 50, 50);
 
   --primary-hover: rgb(50, 50, 50);
 
-  --primary-accent: rgb(114, 42, 42);
+  --primary-accent: rgb(104, 106, 219);
+  --primary-accent-transparent: rgba(104, 106, 219, 0.8);
   --secondary-accent: rgb(29, 29, 32);
+
+
+
+
+
+  --input-border: rgb(50, 50, 50);
+  --input-focus: var(--primary-accent);
+  --input-hover: var(--primary-accent);
+  --input-background: var(--secondary-accent);
+
+  --primary-seperator: rgb(80, 80, 80);
+
+
+  --primary-error: rgb(200, 50, 50);
+
+
+
+
+  --break-color: rgb(50, 200, 50);
+  --study-color: rgb(85, 124, 252);
 }

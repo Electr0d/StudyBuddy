@@ -1,0 +1,21 @@
+.card {
+  min-width: 200px;
+  min-height: 200px;
+  box-shadow: -2px 2px 3px var(--primary-shadow);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-section {
+  padding: 10px;
+  backdrop-filter: brightness(1.2);
+}
+
+.card-section-title {
+  backdrop-filter: brightness(0.8);
+  border-radius: 10px 10px 0 0;
+}
+.card-section-body {
+  height: 100%;
+}

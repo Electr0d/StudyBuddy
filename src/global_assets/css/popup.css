@@ -10,12 +10,15 @@ overlay {
 }
 
 .window {
-  background: var(--secondary-accent);
+  background: var(--primary-background);
   min-width: 500px;
   min-height: 200px;
-  border-radius: 1em;
+  max-width: 90%;
+  border-radius: 0.7em;
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--primary-border);
+  box-shadow: -2px 2px 5px var(--primary-shadow);
 }
 
 .title-bar {
@@ -32,6 +35,7 @@ overlay {
   flex-direction: row;
   align-items: center;
   padding: 10px;
+  margin-left: 0.5em;
 }
 .window-title {
   margin-left: 1em;
@@ -44,7 +48,7 @@ overlay {
   align-items: center;
   height: 30px;
   width: 40px;
-  border-radius: 0 1em 0 0;
+  border-radius: 0 0.7em 0 0;
 }
 .window-controls:hover {
   background: rgb(200, 50, 50);
@@ -54,12 +58,15 @@ overlay {
   width: 10px;
 }
 .popup {
-  animation: popup-draw-in 0.1s ease-out;
+  animation: popup-draw-in 0.2s ease-out;
 }
 @keyframes popup-draw-in {
-  from {
+  0% {
     transform: scale(0.95);
     opacity: 0;
+  }
+  60% {
+    transform: scale(1.02);
   }
 }
 
@@ -69,4 +76,18 @@ overlay {
 }
 overlay.popup-draw-out {
   backdrop-filter: brightness(1);
+}
+
+.window-icon.rotate {
+  animation: rotate-icon 1.2s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate-icon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
