@@ -5,8 +5,8 @@ const isDev = require('electron-is-dev');
 function getUserHome() {
 	return process.env[process.platform == 'win32' ? 'USERPROFILE' : 'HOME'];
 }
-
-const parentDir = isDev ? path.join(getUserHome(), '/Appdata/Local/StudyBuddyDev') : path.join(getUserHome(), '/Appdata/Local/StudyBuddyDev');
+let dirPrefix = process.platform == 'win32' ? '/Appdata/Local' : '';
+const parentDir = isDev ? path.join(getUserHome(), dirPrefix + '/StudyBuddyDev') : path.join(getUserHome(), dirPrefix + '/StudyBuddyDev');
 if (!fs.existsSync(parentDir)) {
 	console.log("Parent directory doesn't exist");
 	fs.mkdirSync(parentDir);
@@ -28,7 +28,7 @@ let config = {
     }
   },
   rain: {
-    volume: 50
+    volume: 0.5
   }
 }
 
